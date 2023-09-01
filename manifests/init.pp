@@ -10,11 +10,11 @@ exec { 'install_datadog-datadog_agent':
 
 # # include datadog_agent
 
-# datadog_agent::integration { 'dns_check':
-#   instances => [
-#     {
-#       hostname   => 'example.com',
-#       nameserver => '8.8.8.8',
-#     },
-#   ],
-# }
+datadog_agent::integration { 'dns_check':
+  instances => [
+    {
+      hostname   => 'example.com',
+      nameserver => '8.8.8.8',
+    },
+  ],
+}
