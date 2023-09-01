@@ -2,6 +2,8 @@ notify { 'Hello, World!':
   message => 'Hello, World!',
 }
 
+include datadog_agent
+
 datadog_agent::integration { 'dns_check':
   instances => [
     {
